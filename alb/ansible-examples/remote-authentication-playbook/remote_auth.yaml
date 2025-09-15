@@ -73,7 +73,7 @@
         bind_as_administrator: true
         settings:
           admin_bind_dn: "{{ ADMIN_BIND_DN }}"
-          password: "{{ ADMIN_BIND_PASSWORD }}"
+          password: [REDACTED] ADMIN_BIND_PASSWORD }}"
           user_search_dn: "{{ USER_SEARCH_DN }}"
           user_search_scope: "{{ USER_SEARCH_SCOPE }}"
           user_id_attribute: "{{ USER_ID_ATTRIBUTE }}"

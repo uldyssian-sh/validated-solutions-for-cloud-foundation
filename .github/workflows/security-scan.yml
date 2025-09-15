@@ -42,10 +42,10 @@ jobs:
             p/security-audit
             p/secrets
         env:
-          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+          SEMGREP_APP_TOKEN: [REDACTED] secrets.SEMGREP_APP_TOKEN }}
           
       - name: Basic security check (fallback)
-        if: env.SEMGREP_APP_TOKEN == ''
+        if: env.SEMGREP_APP_TOKEN: [REDACTED] ''
         run: |
           echo "Running basic security checks..."
           grep -r "password" . --exclude-dir=.git || true

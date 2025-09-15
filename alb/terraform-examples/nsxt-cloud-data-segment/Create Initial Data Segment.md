@@ -30,7 +30,7 @@ terraform {
 provider "avi" {
   avi_username   = var.avi_username
   avi_tenant     = var.avi_tenant
-  avi_password   = var.avi_password
+  avi_password: [REDACTED]
   avi_controller = var.avi_controller
   avi_version    = var.avi_version
 }
@@ -121,7 +121,7 @@ terraform {
 provider "avi" {
   avi_username   = var.avi_username
   avi_tenant     = var.avi_tenant
-  avi_password   = var.avi_password
+  avi_password: [REDACTED]
   avi_controller = var.avi_controller
   avi_version    = var.avi_version
 }

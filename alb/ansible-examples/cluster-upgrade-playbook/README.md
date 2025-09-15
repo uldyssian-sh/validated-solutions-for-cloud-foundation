@@ -55,7 +55,7 @@ CONTROLLER_CLUSTER_IP: <Controller Cluster/Node IP> # This can be either cluster
 AVI_CREDENTIALS:
   controller: *\<CONTROLLER_CLUSTER_IP\>*</br>
   username: *\<Avi Username\>*</br>
-  password: *\<Avi User Password\>*</br>
+  password: [REDACTED] User Password\>*</br>
   api_version: *\<Avi Controller Version\>* #Ex. "22.1.3"
 
 ### Upgrade files info

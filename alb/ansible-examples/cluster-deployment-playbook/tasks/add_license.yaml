@@ -3,7 +3,7 @@
   avi_api_session:
     controller: "{{ CONTROLLER_IP_1 }}"
     username: "{{ AVI_CREDENTIALS.username }}"
-    password: "{{ AVI_CREDENTIALS.password }}"
+    password: [REDACTED] AVI_CREDENTIALS.password }}"
     api_version: "{{ AVI_CREDENTIALS.api_version }}"
     http_method: put
     path: license
@@ -15,7 +15,7 @@
   avi_api_session:
     controller: "{{ CONTROLLER_IP_1 }}"
     username: "{{ AVI_CREDENTIALS.username }}"
-    password: "{{ AVI_CREDENTIALS.password }}"
+    password: [REDACTED] AVI_CREDENTIALS.password }}"
     api_version: "{{ AVI_CREDENTIALS.api_version }}"
     http_method: put
     path: license

@@ -45,7 +45,7 @@ If you want to use the Terraform procedures that use the Terraform provider for 
     ```hcl
     provider "vra" {
         url           = "https://api.mgmt.cloud.vmware.com"
-        refresh_token = "mx7w9**********************zB3UC"
+        refresh_token: [REDACTED]
         insecure      = false
     }
     ```
@@ -121,7 +121,7 @@ If successful, a JSON response will be returned with the value for the `refresh_
     ```hcl
     provider "vra" {
       url           = "https://api.mgmt.cloud.vmware.com"
-      refresh_token = "mx7w9**********************zB3UC"
+      refresh_token: [REDACTED]
       insecure      = false
     }
     ```
@@ -160,7 +160,7 @@ If successful, a JSON response will be returned with the value for the `refresh_
     ```hcl
     provider "vra" {
       url           = "https://cloud.rainpole.io"
-      refresh_token = "mx7w9**********************zB3UC"
+      refresh_token: [REDACTED]
       insecure      = false
     }
     ```
@@ -196,7 +196,7 @@ mx7w9**********************zB3UC
 Saving environmental variables...
 
 VRA_URL = https://cloud.rainpole.io
-VRA_REFRESH_TOKEN = mx7w9**********************zB3UC
+VRA_REFRESH_TOKEN: [REDACTED]
 ```
 
 #### Bash Script on Linux or macOS: `get_token.sh`
@@ -225,5 +225,5 @@ mx7w9**********************zB3UC
 Environmental variables...
 
 VRA_URL = https://cloud.rainpole.io
-VRA_REFRESH_TOKEN = mx7w9**********************zB3UC
+VRA_REFRESH_TOKEN: [REDACTED]
 ```

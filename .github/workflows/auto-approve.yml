@@ -10,11 +10,11 @@ jobs:
     steps:
       - uses: hmarr/auto-approve-action@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: [REDACTED] secrets.GITHUB_TOKEN }}
       - name: Auto merge
         uses: pascalgn/auto-merge-action@v0.15.6
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: [REDACTED] secrets.GITHUB_TOKEN }}
           MERGE_LABELS: ""
           MERGE_METHOD: squash
           MERGE_COMMIT_MESSAGE: pull-request-title
