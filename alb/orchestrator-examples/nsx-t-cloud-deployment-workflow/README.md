@@ -20,9 +20,9 @@ Tested Product Versions: vRO 7.6, vRO 8.1
 
 # Introduction
 
-The purpose of this workflow is to deploy an NSX-T Cloud Connector on an Avi Cluster. When an NSX-T Cloud Connector is created through the Avi UI, it is required to configure atleast 1 Data Segment. However, when configuring an NSX-T Cloud through vRO you can configure the Cloud without this requirement. This is useful if seperate teams handle the individual parts of the Cloud. To configure the intial Data Segment or add additional Data Segments at a later time, the end user can utilize the NSX-T Cloud - Data Segments Workflow. 
+The purpose of this workflow is to deploy an NSX-T Cloud Connector on an Avi Cluster. When an NSX-T Cloud Connector is created through the Avi UI, it is required to configure atleast 1 Data Segment. However, when configuring an NSX-T Cloud through vRO you can configure the Cloud without this requirement. This is useful if seperate teams handle the individual parts of the Cloud. To configure the intial Data Segment or add additional Data Segments at a later time, the end user can utilize the NSX-T Cloud - Data Segments Workflow.
 
-This Workflow will also allow the end user to configure Segment IP Address Pools for both the Management and Data Networks. 
+This Workflow will also allow the end user to configure Segment IP Address Pools for both the Management and Data Networks.
 
 The flow of Action in this Workflow is as following:
 
@@ -37,7 +37,7 @@ The following prerequisites are required to successfully utilize this Workflow:
 
 * Credentials for the NSX-T Manager with Network Admin Role.
 
-* Credentials for the Associated vCenter Server with appropriate permissions need to be setup based on the following documentation - https://avinetworks.com/docs/20.1/roles-and-permissions-for-vcenter-nsx-t-users/ 
+* Credentials for the Associated vCenter Server with appropriate permissions need to be setup based on the following documentation - https://avinetworks.com/docs/20.1/roles-and-permissions-for-vcenter-nsx-t-users/
 
 * IP Pool information is required if the end user requires the Management or Data Segment IP Address Pools to be configured.
 
@@ -65,7 +65,7 @@ The following is a breakdown of the Input Form for this Workflow.
 
 -  **Avi Controller:** *\<Drop Down list of vro Clients\>*</br>
 -  **NSX-T Credential Name:** *\<Text Field for NSX-T Credential Object Name\>*</br>
--  **NSX-T Manager:** *\<Text Field for NSX-T Manager IP Address or FQDN\>*</br>  
+-  **NSX-T Manager:** *\<Text Field for NSX-T Manager IP Address or FQDN\>*</br>
 -  **NSX-T Username:** *\<Text Field for NSX-T Manager Username\>*</br>
 -  **NSX-T Password:** *\<SecureString Field for NSX-T Manager User Password\>*</br>
 -  **Verify NSX-T Password:** *\<SecureString Field for NSX-T Manager User Password\>*</br>
@@ -74,10 +74,10 @@ The following is a breakdown of the Input Form for this Workflow.
 
 - **vCenter Credential Name:** *\<Text Field for NSX-T Credential Object Name\>*</br>
 - **vCenter Address (As entered in NSX-T Manager Compute Managers:** *\<Text Field for vCenter Manager IP Address or FQDN\>*</br>
-- **vCenter Username:** *\<Text Field for vCenter Username\>*</br> 
-- **vCenter Password:** *\<SecureString Field for vCenter User Password\>*</br> 
-- **Verify vCenter Password:** *\<SecureString Field for vCenter User Password\>*</br> 
-- **Content Library Name:** *\<Text Field for Content Library Name\>*</br> 
+- **vCenter Username:** *\<Text Field for vCenter Username\>*</br>
+- **vCenter Password:** *\<SecureString Field for vCenter User Password\>*</br>
+- **Verify vCenter Password:** *\<SecureString Field for vCenter User Password\>*</br>
+- **Content Library Name:** *\<Text Field for Content Library Name\>*</br>
 
 ### NSX-T Cloud:
 

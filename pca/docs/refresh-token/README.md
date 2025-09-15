@@ -2,7 +2,7 @@
 
 Before making a call to Aria Automation, you request an API token that authenticates you for authorized API connections. The API token is also known as a "refresh token".
 
-The Terraform provider for VMware Aria Automation accepts either a `refresh_token` or an `access_token`, but not both at the same time. 
+The Terraform provider for VMware Aria Automation accepts either a `refresh_token` or an `access_token`, but not both at the same time.
 
 * Refresh token are valid for **90 days**, when using the API.
 * Access tokens are valid for **8 hours**, but times out after **25 minutes** of inactivity.
@@ -98,7 +98,7 @@ If successful, a JSON response will be returned with the value for the `refresh_
 
     $vraBody="{""username"":""$vraUsername"",""password"":""$vraPassword"",""domain"":""$vraDomain""}"
     ```
-    
+
 2. `POST` request to the API:
 
     ```powershell
@@ -134,13 +134,13 @@ If successful, a JSON response will be returned with the value for the `refresh_
     vraFqdn=cloud@rainpole.io
 
     vraUsername=john.doe
-    
+
     vraPassword=VMw@re1!
-    
+
     vraDomain=rainpole.io
-  
+
     vraUrl="https://"$vraFqdn"/csp/gateway/am/api/login?access_token"
-    
+
     vraBody="{\"username\":\"$vraUsername\",\"password\":\"$vraPassword\",\"domain\":\"$vraDomain\"}"
     ```
 
@@ -167,7 +167,7 @@ If successful, a JSON response will be returned with the value for the `refresh_
 
 ### Scripts
 
-Scripts for both PowerShell and Bash are included in the project repository in the `scripts` directory. These scripts will prompt you for the values and return the `refresh_token`.  
+Scripts for both PowerShell and Bash are included in the project repository in the `scripts` directory. These scripts will prompt you for the values and return the `refresh_token`.
 
 * PowerShell Script: [`get_token.ps1`](../../scripts/get_token.ps1)
 * Bash Script: [`get_token.sh`](../../scripts/get_token.sh)

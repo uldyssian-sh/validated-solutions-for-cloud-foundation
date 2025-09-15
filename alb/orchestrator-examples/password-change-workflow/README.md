@@ -46,21 +46,21 @@ This Workflow does not require any specific configuration to successfully execut
 
 The following is a breakdown of the Input Form for this Workflow.
 
-### General: 
+### General:
 - **Controller:** *\<Drop Down list of vro Clients\>*</br>
 - **Change AVI User Password?:** *\<boolean\>*</br>
-- **Change NSX-T Connector Password?:** *\<boolean\>*</br> 
+- **Change NSX-T Connector Password?:** *\<boolean\>*</br>
 
-### AVI User Password Change: 
-- **Avi User:** *\<Drop Down list of users\>*</br> 
-- **Old Password:** *\<SecureString Password Field\>*</br> 
-- **New Password:** *\<SecureString Password Field\>*</br> 
-- **Verify New Password:** *\<Constraint - Must match New Password\>*</br> 
+### AVI User Password Change:
+- **Avi User:** *\<Drop Down list of users\>*</br>
+- **Old Password:** *\<SecureString Password Field\>*</br>
+- **New Password:** *\<SecureString Password Field\>*</br>
+- **Verify New Password:** *\<Constraint - Must match New Password\>*</br>
 
-### NSX-T Password Change: 
-- **NSX-T Cloud:** *\<Drop Down list of clouds\>*</br> 
-- **New NSX-T Connector Password:** *\<SecureString Password Field\>*</br> 
-- **Verify New NSX-T Connector Password:** *\<Constraint - Must match New Password\>*</br> 
+### NSX-T Password Change:
+- **NSX-T Cloud:** *\<Drop Down list of clouds\>*</br>
+- **New NSX-T Connector Password:** *\<SecureString Password Field\>*</br>
+- **Verify New NSX-T Connector Password:** *\<Constraint - Must match New Password\>*</br>
 
 
 **[Back to top](#table-of-contents)**
@@ -75,7 +75,7 @@ a.	Yes – Change NSX-T Cloud Connector password based on provided information.
 b.	No – Continue with Workflow.
 3.	Decision – Change Avi User password?
 a.	Yes – Change Avi User password based on previded information.
-b.	No – End Workflow. 
+b.	No – End Workflow.
 
 
 If the NSX-T Cloud Connector password change failed, the Workflow will fail, and the end user will need to validate the provided information.

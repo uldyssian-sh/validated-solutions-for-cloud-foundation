@@ -1,10 +1,10 @@
 # NSX-T Cloud Data Initial Segment Creation
 
-Developed by: William Stoneman. 
+Developed by: William Stoneman.
 
 # Introduction
 
-The purpose of this file is to lay out the steps to create the initial NSX-T Data Segment after the NSX-T Cloud Connector has been successfully created. 
+The purpose of this file is to lay out the steps to create the initial NSX-T Data Segment after the NSX-T Cloud Connector has been successfully created.
 
 NOTE: This is only needed if the initial Data Segment was not specified during the NSX-T CLoud Connector creation.
 
@@ -169,7 +169,7 @@ resource "avi_cloud" "nsx-t-cloud" {
 
 9. Edit the `data_network_config` section of the `avi_cloud` resource and replace the following:
 
-Example: 
+Example:
 
 ```hcl
 	tz_type        = "OVERLAY"

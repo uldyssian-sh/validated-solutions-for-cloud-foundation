@@ -48,7 +48,7 @@ This Workflow does not require any specific configuration to successfully execut
 
 The following is a breakdown of the Input Form for this Workflow.
 
-### General: 
+### General:
 - **Avi Controller:** *\<Drop Down list of vro Clients\>*</br>
 - **Deployment Type:** *\<Drop Down list of Deployment Types - ovfTool || Content Library\>*</br>
 - **vCenter FQDN or IP Address:** *\<Text Field for vCenter FQDN or IP Address\>*</br>
@@ -58,7 +58,7 @@ The following is a breakdown of the Input Form for this Workflow.
 - **If set to true, the certificate is accepted silently and the certificate is added to the trusted store:** *\<Boolean\>*</br>
 - **OVA Path on VRO Appliance:** *\<Text Field for OVA Template Path\>*</br>
 - **Content Library Template:** *\<Text Field for Content Library Template name\>*</br>
-  
+
 
 
 

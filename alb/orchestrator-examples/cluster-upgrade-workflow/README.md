@@ -48,14 +48,14 @@ The following configuration parameters need to be set to successful execute this
 
 * Update the following Workflow variables with the information for the Linux Server. If the local vRO Appliance is used, you must specify the IP Address or FQDN and NOT localhost.
 	* sshHost – The FQDN or IP Address of the Linux Server.
-	* sshPort – The SSH Port configured for the Linux Server. 
+	* sshPort – The SSH Port configured for the Linux Server.
 	* sshUsername – A Username that has access to run the ovftool commandlet.
 	* sshPassword – The Password for the User.
 	* sshCommandPath – The Command path for running the ovftool commandlet.
 
 * The Workflow will retrieve the backup configuration and save it to a file on the vRO Appliance. This is an on-demand one time backup and is used in case the upgrade causes a controller fault.
 
-* Depending on the SE Error Response selection, the Workflow will either 
+* Depending on the SE Error Response selection, the Workflow will either
 Monitor the upgrade and will NOT fail on upgrade error of Service Engines. After all SEs have either been successfully upgraded or encountered a failure, the Workflow will output all of the SE names, Upgrade Percentage and state. This will provide the end user with the required information to resolve any upgrade issue.
 
 * Monitor the upgrade and FAIL the Workflow on any SE upgrade error. The Workflow will output all of the SE names, Upgrade Percentage and state. This will provide the end user with the required information to resolve any upgrade issue.
@@ -68,19 +68,19 @@ Monitor the upgrade and will NOT fail on upgrade error of Service Engines. After
 
 The following is a breakdown of the Input Form for this Workflow.
 
-### General: 
+### General:
 
 -  **Controller:** *\<Dropdown list of vro Clients\>*</br>
 -  **Controller Cluster Admin Password:** *\<SecureString Password Field\>*</br>
--  **Backup Passphrase:** *\<SecureString Password Field\>*</br> 
--  **Backup Directory on vRO Appliance:** *\<Text FIeld for vRO Appliance Directory\>*</br> 
--  **Verify Backup Passphrase:** *\<Contraint - Must match Backup Passphrase\>*</br> 
--  **SE Error Recovery Action:** *\<Dropdown list - Suspend Upgrade, Continue Upgrade\>*</br> 
--  **Upgrade Type:** *\<Dropdown list - Base Only Upgrade, Base and Patch Upgrade, Patch Only Upgrade\>*</br> 
--  **Base Upgrade File Location:** *\<Text Field for Full Path on Local VRO Appliance\>*</br> 
--  **Patch Upgrade File Location:** *\<Text Field of Full Path on Local VRO Appliance\>*</br> 
+-  **Backup Passphrase:** *\<SecureString Password Field\>*</br>
+-  **Backup Directory on vRO Appliance:** *\<Text FIeld for vRO Appliance Directory\>*</br>
+-  **Verify Backup Passphrase:** *\<Contraint - Must match Backup Passphrase\>*</br>
+-  **SE Error Recovery Action:** *\<Dropdown list - Suspend Upgrade, Continue Upgrade\>*</br>
+-  **Upgrade Type:** *\<Dropdown list - Base Only Upgrade, Base and Patch Upgrade, Patch Only Upgrade\>*</br>
+-  **Base Upgrade File Location:** *\<Text Field for Full Path on Local VRO Appliance\>*</br>
+-  **Patch Upgrade File Location:** *\<Text Field of Full Path on Local VRO Appliance\>*</br>
 -  **Upgrade Version:** *\<Text Field for Upgrade release version\>*</br>
--  **Patch Upgrade Version:** *\<Text Field for Patch Upgrade release version\>*</br> 
+-  **Patch Upgrade Version:** *\<Text Field for Patch Upgrade release version\>*</br>
 
 
 **[Back to top](#table-of-contents)**
@@ -109,7 +109,7 @@ The flow of Actions for this workflow are:
 
 
 
-If the Cluster nodes encounter an error during the upgrade process, the workflow will fail. The end User will need to manually resolve the issue and continue the upgrade. 
+If the Cluster nodes encounter an error during the upgrade process, the workflow will fail. The end User will need to manually resolve the issue and continue the upgrade.
 
 If the SE error response of Suspend is selected in the Input Form, when the Service Engines encounter an error during the upgrade process, the workflow will also fail. The end user will need to manually resolve the issue and continue the upgrade. However, if the SE error response of Continue is selected in the Input Form, the Workflow will not fail. It will continue with the upgrade process and present a final list of the Service Engines and the upgrade status. The end user will need to manually resolve and SEs that encounter an error during upgrade.
 

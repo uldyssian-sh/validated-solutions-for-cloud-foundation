@@ -20,12 +20,12 @@ Tested Product Versions: vRO 7.6, vRO 8.1
 
 # Introduction
 
-The purpose of this Workflow is to deploy an AVI 3 Node Controller Cluster and configure all required settings to bring it to a stable usable state. The Workflow will first initiate the deployment of 3 Avi Controller Appliances to the desired vCenter environment, either utilizing a remote Linux host running ovftool or through a vRO vAPI connection to deploy using a Content Library Template.  The Workflow will then configure the following required settings: 
+The purpose of this Workflow is to deploy an AVI 3 Node Controller Cluster and configure all required settings to bring it to a stable usable state. The Workflow will first initiate the deployment of 3 Avi Controller Appliances to the desired vCenter environment, either utilizing a remote Linux host running ovftool or through a vRO vAPI connection to deploy using a Content Library Template.  The Workflow will then configure the following required settings:
 
 * Change Default Admin Password
-* DNS Servers 
-* NTP Servers 
-* SMTP Configuration 
+* DNS Servers
+* NTP Servers
+* SMTP Configuration
 * Local/Remote SCP/AWS S3 Bucket Backup Configuration
 * Licensing Configuration
 
@@ -54,7 +54,7 @@ The following configuration parameters need to be set to successful execute this
 
 * OVFTool Deployment - Update the following Workflow variables with the information for the Linux Server. If the local vRO Appliance is used, you must specify the IP Address or FQDN and NOT localhost.
 	* **sshHost** – The FQDN or IP Address of the Linux Server.
-	* **sshPort** – The SSH Port configured for the Linux Server. 
+	* **sshPort** – The SSH Port configured for the Linux Server.
 	* **sshUsername** – A Username that has access to run the ovftool commandlet.
 	* **sshPassword** – The Password for the User.
 	* **sshCommandPath** – The Command path for running the ovftool commandlet.
@@ -74,7 +74,7 @@ The following is a breakdown of the Input Form for this Workflow.
 
 -  **Vm Deployment Type:** *\<Drop Down - Deploy Using OVFTool, Deploy using COntent Library\>*</br>
 -  **vCenter FQDN or IP Address:** *\<Text Field for vCenter Information\>*</br>
--  **vCenter Connection:** *\<Drop Down - List of vRO vCenter Endpoints\>*</br>  
+-  **vCenter Connection:** *\<Drop Down - List of vRO vCenter Endpoints\>*</br>
 -  **vCenter Username:** *\<Text Field for vCenter Username\>*</br>
 -  **vCenter User Password:** *\<SecureString Field for vCenter Password\>*</br>
 -  **vCenter Datacenter:** *\<Text Field for vCenter Datacenter\>*</br>
@@ -86,62 +86,62 @@ The following is a breakdown of the Input Form for this Workflow.
 -  **Controller 2 VM Name:** *\<Text Field for COntroller 2 Name\>*</br>
 -  **Controller 3 VM Name:** *\<Text Field for COntroller 3 Name\>*</br>
 -  **OVA File Path:** *\<Controller OVA Template File path on vRO Appliance\>*</br>
--  **Content Library Template Name:** *\<Controller OVA Template File from Content Library\>*</br> 
--  **VM Flavor:** *\<Drop Down - Small - 8vCPU - 24GB RAM, Medium - 16vCPU - 32GB RAM, Large - 24vCPU - 48GB RAM\>*</br> 
+-  **Content Library Template Name:** *\<Controller OVA Template File from Content Library\>*</br>
+-  **VM Flavor:** *\<Drop Down - Small - 8vCPU - 24GB RAM, Medium - 16vCPU - 32GB RAM, Large - 24vCPU - 48GB RAM\>*</br>
 -  **VM Disk Size:** *\<Drop Down - 128GB, 256GB, 512GB, 1TB\>*</br>
 
 ### Cluster Information:
 
 - **Certificate Silent Acceptance:** *\<Boolean\>*</br>
 - **Controller 1 IP Address:** *\<Text Field for Controller 1 IP Address\>*</br>
-- **Controller 2 IP Address:** *\<Text Field for Controller 2 IP Address\>*</br> 
-- **Controller 3 IP Address:** *\<Text Field for Controller 3 IP Address\>*</br> 
-- **Cluster VIP IP Address:** *\<Text Field for VIP IP address\>*</br> 
-- **Controller IP Gateway:** *\<Text Field for IP Gateway\>*</br> 
-- **Controller IP Mask:** *\<Text Field for IP Mask\>*</br> 
-- **New Admin Password:** *\<SecureString Field for admin Password\>*</br> 
-- **Avi Controller Version:** *\<Text Field for Avi Version\>*</br> 
+- **Controller 2 IP Address:** *\<Text Field for Controller 2 IP Address\>*</br>
+- **Controller 3 IP Address:** *\<Text Field for Controller 3 IP Address\>*</br>
+- **Cluster VIP IP Address:** *\<Text Field for VIP IP address\>*</br>
+- **Controller IP Gateway:** *\<Text Field for IP Gateway\>*</br>
+- **Controller IP Mask:** *\<Text Field for IP Mask\>*</br>
+- **New Admin Password:** *\<SecureString Field for admin Password\>*</br>
+- **Avi Controller Version:** *\<Text Field for Avi Version\>*</br>
 
 
 ### DNS Configuration:
 
-- **DNS Servers:** *\<Array of Strings\>*</br> 
+- **DNS Servers:** *\<Array of Strings\>*</br>
 
 
 ### NTP Configuration:
 
-- **NTP Servers:** *\<Array of Strings\>*</br> 
+- **NTP Servers:** *\<Array of Strings\>*</br>
 
 
-### SMTP Configuration: 
+### SMTP Configuration:
 
-- **From Email Address:** *\<Text Field for Email Address\>*</br> 
-- **SMTP Type: Drop Down for SMTP Type:** *\<SMTP_LOCAL_HOST || SMTP_SERVER\>*</br> 
+- **From Email Address:** *\<Text Field for Email Address\>*</br>
+- **SMTP Type: Drop Down for SMTP Type:** *\<SMTP_LOCAL_HOST || SMTP_SERVER\>*</br>
 - **Mail Server FQDN or IP Address:** *\<Visiable only when SMTP_SERVER is selected\>*</br>
-- **Mail Server Port:** *\<Default 25\>*</br> 
-- **SMTP Server Username:** *\<Visible only whenSMTP_Server is selected\>*</br> 
-- **SMTP Server Password:** *\<SecureString: Visible only when SMTP_Server is selected\>*</br> 
+- **Mail Server Port:** *\<Default 25\>*</br>
+- **SMTP Server Username:** *\<Visible only whenSMTP_Server is selected\>*</br>
+- **SMTP Server Password:** *\<SecureString: Visible only when SMTP_Server is selected\>*</br>
 
 
-### Backup Configuration: 
+### Backup Configuration:
 
-- **Backup Passphrase:** *\<SecureString for Backup Passphrase\>*</br> 
-- **Backup File Prefix:** *\<Text Field for Backup File Prefix\>*</br> 
-- **Backup Type:** *\<Dropdown - Local, Remote, AWS S3 Bucket\>*</br> 
-- **Backup Credential Object Name:** *\<Text Field for Backup Credential Object Name\>*</br> 
-- **Backup SCP Host:** *\<Text Field for SCP Hostname\>*</br> 
-- **Backup SCP Password:** *\<SecureString for Backup SCP Password\>*</br> 
-- **Backup Path:** *\<Text Field for SCP path\>*</br> 
-- **AWS Access Key:** *\<Text Field for AWS S3 Access Key\>*</br> 
-- **AWS Secret Key:** *\<Text Field for AWS S3 Secret Key\>*</br> 
-- **AWS Bucket Name:** *\<Text Field for AWS S3 Bucket Name\>*</br> 
+- **Backup Passphrase:** *\<SecureString for Backup Passphrase\>*</br>
+- **Backup File Prefix:** *\<Text Field for Backup File Prefix\>*</br>
+- **Backup Type:** *\<Dropdown - Local, Remote, AWS S3 Bucket\>*</br>
+- **Backup Credential Object Name:** *\<Text Field for Backup Credential Object Name\>*</br>
+- **Backup SCP Host:** *\<Text Field for SCP Hostname\>*</br>
+- **Backup SCP Password:** *\<SecureString for Backup SCP Password\>*</br>
+- **Backup Path:** *\<Text Field for SCP path\>*</br>
+- **AWS Access Key:** *\<Text Field for AWS S3 Access Key\>*</br>
+- **AWS Secret Key:** *\<Text Field for AWS S3 Secret Key\>*</br>
+- **AWS Bucket Name:** *\<Text Field for AWS S3 Bucket Name\>*</br>
 
 
-### Licensing: 
+### Licensing:
 
-- **License Type:** *\<Dropdown - VMWare License Key, Avi License File\>*</br> 
-- **License File:** *\<Text Box for license YML file\>*</br> 
-- **License Key:** *\<Array of Strings\>*</br> 
+- **License Type:** *\<Dropdown - VMWare License Key, Avi License File\>*</br>
+- **License File:** *\<Text Box for license YML file\>*</br>
+- **License Key:** *\<Array of Strings\>*</br>
 
 
 

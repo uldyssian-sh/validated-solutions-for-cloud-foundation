@@ -1,6 +1,6 @@
 # Certificate Renewal
 
-Developed by: William Stoneman  
+Developed by: William Stoneman
 
 ## Table of Contents
 1.	[Introduction](#Introduction)
@@ -22,7 +22,7 @@ Terraform (tested on Terraform version 1.1.0 and up)
 
 # Requirements
 
-This Terraform configuration has been tested against renewing certificate objects for both application and controller certificates generated using the built in CSR process on the Avi Controller. 
+This Terraform configuration has been tested against renewing certificate objects for both application and controller certificates generated using the built in CSR process on the Avi Controller.
 
 * A CSR will need to be manaully created on the Avi Controller, and a certificate generated from a CA.
 

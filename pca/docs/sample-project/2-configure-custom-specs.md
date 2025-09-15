@@ -89,7 +89,7 @@ Create a Linux guest operating system specification that you can apply when you 
     ```powershell
     Connect-VIServer -Server $vCenterFqdn -User $vCenterUser -Password $vCenterPass
 
-    New-OSCustomizationSpec -Name $customizationName -Description $customizationDescription -OSType $osType  -NamingScheme vm -Domain $domain  
+    New-OSCustomizationSpec -Name $customizationName -Description $customizationDescription -OSType $osType  -NamingScheme vm -Domain $domain
 
     $CustomizationSpec = Get-View -Id 'CustomizationSpecManager-CustomizationSpecManager'
     $item = $CustomizationSpec.GetCustomizationSpec($customizationName)
@@ -204,7 +204,7 @@ Create a Windows guest operating system specification that you can apply when yo
     ```powershell
     Connect-VIServer -Server $vCenterFqdn -User $vCenterUser -Password $vCenterPass
 
-    New-OSCustomizationSpec -Name $customizationName -Description $customizationDescription -OSType $osType -ChangeSid -FullName $ownerName -OrgName $ownerOrganization -NamingScheme vm -AdminPassword $adminPassword -TimeZone $timeZone -Domain $domain -DomainUsername $domainUser -DomainPassword $domainPass 
+    New-OSCustomizationSpec -Name $customizationName -Description $customizationDescription -OSType $osType -ChangeSid -FullName $ownerName -OrgName $ownerOrganization -NamingScheme vm -AdminPassword $adminPassword -TimeZone $timeZone -Domain $domain -DomainUsername $domainUser -DomainPassword $domainPass
     ```
 
 4. View the state of customization specification by running the following command.
@@ -212,7 +212,7 @@ Create a Windows guest operating system specification that you can apply when yo
     ```powershell
     Connect-VIServer -Server $vCenterFqdn -User $vCenterUser -Password $vCenterPass
 
-    New-OSCustomizationSpec -Name $customizationName -Description $customizationDescription -OSType $osType -ChangeSid -FullName $ownerName -OrgName $ownerOrganization -NamingScheme vm -AdminPassword $adminPassword -TimeZone $timeZone -Domain $domain -DomainUsername $domainUser -DomainPassword $domainPass 
+    New-OSCustomizationSpec -Name $customizationName -Description $customizationDescription -OSType $osType -ChangeSid -FullName $ownerName -OrgName $ownerOrganization -NamingScheme vm -AdminPassword $adminPassword -TimeZone $timeZone -Domain $domain -DomainUsername $domainUser -DomainPassword $domainPass
     ```
 
 5. Disconnect from the VI workload domain vCenter Server.

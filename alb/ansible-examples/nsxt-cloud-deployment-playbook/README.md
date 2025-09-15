@@ -73,7 +73,7 @@ NSXT_DATA_TZ: *\<NSXT Data Transport Zone\>*</br>
 NSXT_DATA_T1_SEG:  *\<List of Array elements of NSXT Data T1 Segments\>* #Comment if Transport Zone is type VLAN</br>
 [*\< - {T1: "<T1 Router Name1>", SEG: "<Segment Name1>"} \>*] #Comment if Transport Zone is type VLAN
 [*\< - {T1: "<T1 Router Name2>", SEG: "<Segment Name2>"} \>*] #Comment if Transport Zone is type VLAN
-NSXT_DATA_VLAN_SEG: *\<List of Array elements of NSXT Data VLAN Segments\>* #Comment if Transport Zone is type Overlay</br> 
+NSXT_DATA_VLAN_SEG: *\<List of Array elements of NSXT Data VLAN Segments\>* #Comment if Transport Zone is type Overlay</br>
 [*\< - {SEG: "Segment Name1>"} \>*] #Comment if Transport Zone is type Overlay
 [*\< - {SEG: "Segment Name2>"} \>*] #Comment if Transport Zone is type Overlay
 
@@ -105,6 +105,6 @@ The flow of Actions for this Playbook are:
 
 The following are considerations that need to be understood when executing this Playbook:
 
-* This Playbook does not require Data Segments to be defined for it to execute successfully. This is useful if seperate teams handle the individual parts of the Cloud. To configure the intial Data Segment or add additional Data Segments at a later time, the end user can utilize the NSX-T Cloud - Data Segments Playbook. 
+* This Playbook does not require Data Segments to be defined for it to execute successfully. This is useful if seperate teams handle the individual parts of the Cloud. To configure the intial Data Segment or add additional Data Segments at a later time, the end user can utilize the NSX-T Cloud - Data Segments Playbook.
 
 

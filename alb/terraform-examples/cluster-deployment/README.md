@@ -1,6 +1,6 @@
 # Cluster Deployment
 
-Developed by:  Yuriy Andrushko and William Stoneman  
+Developed by:  Yuriy Andrushko and William Stoneman
 
 ## Table of Contents
 1.	[Introduction](#Introduction)
@@ -12,7 +12,7 @@ Developed by:  Yuriy Andrushko and William Stoneman
 
 # Introduction
 
-The purpose of this Terraform configuration is to deploy an AVI 3 Node Controller Cluster and configure all required settings to bring it to a stable usable state. The Script will first initiate the deployment of 3 Avi Controller Appliances to the desired vCenter environment, utilizing a template stored on a Content Library.  The Script will then configure the following required settings: 
+The purpose of this Terraform configuration is to deploy an AVI 3 Node Controller Cluster and configure all required settings to bring it to a stable usable state. The Script will first initiate the deployment of 3 Avi Controller Appliances to the desired vCenter environment, utilizing a template stored on a Content Library.  The Script will then configure the following required settings:
 
 * Change Default Admin Password
 * DNS Servers

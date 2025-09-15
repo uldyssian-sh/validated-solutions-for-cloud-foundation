@@ -180,21 +180,21 @@ Each network profile is configured for a specific network port group or network 
 
     a. Log in to the Aria Automation services console at **`https://<vra_fqdn>/csp/gateway/portal`** with a user assigned the **Aria Automation Assembler Administrator** service role.
 
-    b. On the main navigation bar, click **Services**. 
-    
-    c. Under **My services**, click **Aria Automation Assembler**. 
-    
+    b. On the main navigation bar, click **Services**.
+
+    c. Under **My services**, click **Aria Automation Assembler**.
+
     d. Click the **Infrastructure** tab.
 
-    e. In the left pane, select **Configure > Network profiles**. 
-    
+    e. In the left pane, select **Configure > Network profiles**.
+
     f. In the **net-existing-sfo-w01-vc01-01** card, click **Open**.
 
     g. On the **Summary** tab, configure the following value.
 
     | Setting           | Example Value     |
     | :-                | :-                |
-    | Capability tags	| network:existing  |    
+    | Capability tags	| network:existing  |
 
     h. Click the **Networks** tab and for each segment, select the check-box, click **Tags**, configure these capability tags, and click **Save**.
 
@@ -415,14 +415,14 @@ Each network profile is configured for a specific network port group or virtual 
 
     a. Log in to the Aria Automation services console at **https://****<vra\_cluster\_fqdn>/csp/gateway/portal** with a user assigned the **Aria Automation Assembler administrator** service role.
 
-    b. On the main navigation bar, click **Services**. 
-    
-    c. Under **My services**, click **Aria Automation Assembler**. 
-    
+    b. On the main navigation bar, click **Services**.
+
+    c. Under **My services**, click **Aria Automation Assembler**.
+
     d. Click the **Infrastructure** tab.
 
-    e. In the left pane, select **Configure > Network profiles**. 
-    
+    e. In the left pane, select **Configure > Network profiles**.
+
     f. In the **net-ondemand-sfo-w01-vc01** card, click **Open**.
 
     g. On the **Summary** tab, configure the following values and click **Save**.

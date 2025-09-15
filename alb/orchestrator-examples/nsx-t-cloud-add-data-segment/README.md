@@ -22,7 +22,7 @@ Tested Product Versions: vRO 7.6, vRO 8.1
 
 The Purpose of of this Workflow is to configure the intial Data Segment or add additional Data Segments to an exisiting NSX-T Cloud configured on an Avi Cluster. When an NSX-T Cloud Connector is created through the Avi UI, it is required to configure atleast 1 Data Segment. However, when configuring an NSX-T Cloud through vRO you can configure the Cloud without this requirement. This is useful if seperate teams handle the individual parts of the Cloud. Therefore, this Workflow can be run independantly or in conjunction with the NSX-T Cloud Deployment Workflow.
 
-This Workflow will also allow the end user to configure Segment IP Address Pools for both the Management and Data Networks. 
+This Workflow will also allow the end user to configure Segment IP Address Pools for both the Management and Data Networks.
 
 
 # Installation
