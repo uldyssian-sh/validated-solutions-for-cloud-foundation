@@ -1,0 +1,17 @@
+# Global code owners
+* @uldyssian-sh
+
+# Infrastructure and CI/CD
+/.github/ @uldyssian-sh
+/terraform/ @uldyssian-sh
+/scripts/ @uldyssian-sh
+Dockerfile @uldyssian-sh
+docker-compose.yml @uldyssian-sh
+
+# Documentation
+*.md @uldyssian-sh
+/docs/ @uldyssian-sh
+
+# Security and compliance
+SECURITY.md @uldyssian-sh
+/security/ @uldyssian-sh
