@@ -7,7 +7,14 @@
 
 ## 🎯 Overview
 
-Enterprise-grade validated solutions for cloud foundation solution with professional automation, security, and scalability features.
+Professional validated solutions for cloud foundation solution with enterprise-grade automation and security features.
+
+## 📊 Repository Stats
+
+- **Files:**      318
+- **Technologies:** Python PowerShell Terraform YAML Bash
+- **Type:** Infrastructure Automation
+- **Status:** Production Ready
 
 ## ✨ Features
 
@@ -23,11 +30,51 @@ Enterprise-grade validated solutions for cloud foundation solution with professi
 ## 🚀 Quick Start
 
 ```bash
+# Clone repository
 git clone https://github.com/uldyssian-sh/validated-solutions-for-cloud-foundation.git
 cd validated-solutions-for-cloud-foundation
+
+# Setup environment
 chmod +x setup.sh
 ./setup.sh
 ```
+
+
+## 🏗️ Terraform Usage
+
+```bash
+# Initialize Terraform
+terraform init
+
+# Plan deployment
+terraform plan
+
+# Apply configuration
+terraform apply
+```
+
+
+## 🐍 Python Scripts
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run main script
+python main.py
+```
+
+
+## ⚡ PowerShell Scripts
+
+```powershell
+# Set execution policy
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Run main script
+.\main.ps1
+```
+
 
 ## 📚 Documentation
 
@@ -47,8 +94,8 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
 
 ## 🆘 Support
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/uldyssian-sh/validated-solutions-for-cloud-foundation/issues)
-- 📖 **Documentation**: [Wiki](https://github.com/uldyssian-sh/validated-solutions-for-cloud-foundation/wiki)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/uldyssian-sh/REPO_NAME/issues)
+- 📖 **Documentation**: [Wiki](https://github.com/uldyssian-sh/REPO_NAME/wiki)
 
 ---
 
