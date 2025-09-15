@@ -44,7 +44,7 @@ In the sample, the following flavor mappings are used:
 6. Click **New flavor mapping** and configure these settings.
 
     | Setting           | Example Value                 |
-    | :-                | :-                            | 
+    | :-                | :-                            |
     | Flavor name       | x-small                       |
     | Account / region  | sfo-w01-vc01 / sfo-w01-dc01   |
     | Number of CPUs	| 1                             |

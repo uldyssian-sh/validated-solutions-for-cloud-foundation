@@ -2,7 +2,7 @@
 
 <!--
     In order to have the best experience with our community, we recommend that you read the code of conduct and contributing guidelines before submitting a pull request.
-    
+
     By submitting this pull request, you confirm that you have read, understood, and agreed to the project's code of conduct and contributing guidelines.
 
     Please use conventional commits to format the title of the pull request and the commit messages.

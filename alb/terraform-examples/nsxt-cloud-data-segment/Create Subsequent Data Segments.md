@@ -1,10 +1,10 @@
 # NSX-T Cloud Data Subsequent Segment Creation
 
-Developed by: William Stoneman  
+Developed by: William Stoneman
 
 # Introduction
 
-The purpose of this file is to lay out the steps to create subsequent NSX-T Data Segment after the NSX-T Cloud Connector has been successfully created and the intial Data Segment is configured. 
+The purpose of this file is to lay out the steps to create subsequent NSX-T Data Segment after the NSX-T Cloud Connector has been successfully created and the intial Data Segment is configured.
 
 The information provided below is for demonstration purposes only, and you should update the variables with the information from your environment.
 
@@ -100,7 +100,7 @@ resource "avi_cloud" "nsx-t-cloud" {
 
 7. Run `terraform show` and copy the output.
 
-8. Edit the Terraform configuration's `avi_cloud` section and add the output from step 6. 
+8. Edit the Terraform configuration's `avi_cloud` section and add the output from step 6.
 
 Example:
 
@@ -191,7 +191,7 @@ manual {
     tier1_lr_id = var.data_lr_id
   }
 }
-```	
+```
 
 And remove the `id` line.
 

@@ -16,13 +16,13 @@ Playbook Developed by:  Juan Aristizabal and William Stoneman</br>
 
 # Introduction
 
-The purpose of this Playbook is to deploy an AVI 3 Node Controller Cluster and configure all required settings to bring it to a stable usable state. The Playbook will first initiate the deployment of 3 Avi Controller Appliances to the desired vCenter environment, utilizing a remote Linux host running ovftool.  The Playbook will then configure the following required settings: 
+The purpose of this Playbook is to deploy an AVI 3 Node Controller Cluster and configure all required settings to bring it to a stable usable state. The Playbook will first initiate the deployment of 3 Avi Controller Appliances to the desired vCenter environment, utilizing a remote Linux host running ovftool.  The Playbook will then configure the following required settings:
 
 * Change Default Admin Password
-* DNS Servers 
-* NTP Servers 
-* SMTP Configuration 
-* Local/Remote Backup Configuration 
+* DNS Servers
+* NTP Servers
+* SMTP Configuration
+* Local/Remote Backup Configuration
 * Licensing Configuration
 
 # Installation

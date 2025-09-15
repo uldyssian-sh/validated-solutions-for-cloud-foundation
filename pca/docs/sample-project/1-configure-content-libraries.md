@@ -191,7 +191,7 @@ Learn more about creating machine images with HashiCorp Packer and the Packer Pl
 
    ```powershell
    terraform plan -out=tfplan
-   ```  
+   ```
 
 7. Apply the Terraform plan.
 

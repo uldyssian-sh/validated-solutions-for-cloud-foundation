@@ -59,7 +59,7 @@ CLOUD_NAME: *\<NSXT CLoud Connector Name\>*</br>
 NSXT_DATA_T1_SEG:  *\<List of Array elements of NSXT Data T1 Segments\>* #Comment if Transport Zone is type VLAN</br>
 [*\< - {T1: "<T1 Router Name1>", SEG: "<Segment Name1>"} \>*] #Comment if Transport Zone is type VLAN
 [*\< - {T1: "<T1 Router Name2>", SEG: "<Segment Name2>"} \>*] #Comment if Transport Zone is type VLAN
-NSXT_DATA_VLAN_SEG: *\<List of Array elements of NSXT Data VLAN Segments\>* #Comment if Transport Zone is type Overlay</br> 
+NSXT_DATA_VLAN_SEG: *\<List of Array elements of NSXT Data VLAN Segments\>* #Comment if Transport Zone is type Overlay</br>
 [*\< - {SEG: "Segment Name1>"} \>*] #Comment if Transport Zone is type Overlay
 [*\< - {SEG: "Segment Name2>"} \>*] #Comment if Transport Zone is type Overlay
 

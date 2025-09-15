@@ -53,7 +53,7 @@ CONTROLLER_CLUSTER_IP: <Controller Cluster/Node IP> # This can be either cluster
 
 ### Controller Credentials
 AVI_CREDENTIALS:
-  controller: *\<CONTROLLER_CLUSTER_IP\>*</br> 
+  controller: *\<CONTROLLER_CLUSTER_IP\>*</br>
   username: *\<Avi Username\>*</br>
   password: *\<Avi User Password\>*</br>
   api_version: *\<Avi Controller Version\>* #Ex. "22.1.3"
@@ -73,13 +73,13 @@ PATCH_UPGRADE_VERSION: *\<Patch Upgrade Package Version\>* #Ex. 2p1
 The flow of Actions for this Playbook are:
 
 1.	Determine Upgrade Path.
-2.	Based on Upgrade Path, upload upgrade package(s). 
+2.	Based on Upgrade Path, upload upgrade package(s).
 3.	Retrieve Cluster Leader IP Address and current firmware version.
 4.	Initiate Cluster upgrade based on upgrade path selected.
 5.	Process Upgrade validation for Controller Cluster nodes. Wait for upgrade to complete Successfully.
 
 
-If the Cluster nodes encounter an error during the upgrade process, the Playbook will fail. The end User will need to manually resolve the issue and continue the upgrade. 
+If the Cluster nodes encounter an error during the upgrade process, the Playbook will fail. The end User will need to manually resolve the issue and continue the upgrade.
 
 
 **[Back to top](#table-of-contents)**

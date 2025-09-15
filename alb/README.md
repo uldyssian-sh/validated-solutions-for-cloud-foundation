@@ -45,7 +45,7 @@ This solution offers automation of the following procedures:
 - 3 Node Cluster Deployment
 - Cluster Upgrade
 - Application or Controller Certificate Renewal
-- Password Rotation  
+- Password Rotation
   (Avi User, NSX-T Cloud Connector User, and vCenter SeerverUser)
 - Failed Avi Node Replacement
 - NSX-T CLoud Connector Deployment

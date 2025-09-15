@@ -84,7 +84,7 @@ IGNORE_REF: *\<Ignore Ref\>* # Default is set to false </br>
 
 ### Auth Mapping Parameters
 AUTH_MAPPING: *\<\>* #List of Group Mapping array elements" <br>
-[*\<Comma Seperated Group Mapping List\>*] #Ex. - {group: "<LDAP Group Name>", tenant: "<Avi Tenant Name>", role: "<Avi Role Name>"}</br> 
+[*\<Comma Seperated Group Mapping List\>*] #Ex. - {group: "<LDAP Group Name>", tenant: "<Avi Tenant Name>", role: "<Avi Role Name>"}</br>
 
 
 **[Back to top](#table-of-contents)**
@@ -95,7 +95,7 @@ The flow of Actions for this Playbook are:
 
 1.	If SAML Profile is being created
    1. 	Define SAML object based on SAML_ENTITY_TYPE.
-   1. 	Create SAML Profile   
+   1. 	Create SAML Profile
 2.	If LDAP Profile is being created
    2. 	Create LDAP Profile
 3.	Assign Auth Profile to System Configuration and define Group Mapping.

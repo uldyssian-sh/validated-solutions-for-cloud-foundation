@@ -74,7 +74,7 @@ The flow of Actions for this Playbook are:
    1. 	No – Continue with Playbook.
 1. Decision – Change Avi User password?
    1. 	Yes – Change Avi User password based on previded information.
-   1. 	No – End Playbook. 
+   1. 	No – End Playbook.
 
 
 * If the NSX-T Cloud Connector password change failed, the Playbook will fail, and the end user will need to validate the provided information.
