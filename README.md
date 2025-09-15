@@ -89,3 +89,11 @@ The directory structure of the repository.
 We welcome you to use the [GitHub Issues](https://github.com/vmware-samples/validated-solutions-for-cloud-foundation/issues) to report bugs or suggest enhancements.
 
 In order to have a good experience with our community, we recommend that you read the [contributing guidelines](CONTRIBUTING.md).
+
+## 👨‍💻 Author
+
+**LT** - [GitHub Profile](https://github.com/uldyssian-sh)
+
+---
+
+*Enterprise-ready repository with automated workflows and security features.*
