@@ -1,7 +1,7 @@
 # Validated Solutions for VMware Cloud Foundation
 
 <div align="center">
-  <img src="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/images/gallery/thumbnails/tn-vmware-cloud-foundation-logo.jpg" alt="VCF Solutions" width="400"/>
+  <img src="icon.png" alt="VCF Solutions" width="200"/>
   
   [![VCF](https://img.shields.io/badge/VCF-5.0+-00A1C9.svg)](https://www.vmware.com/products/cloud-foundation.html)
   [![Validated](https://img.shields.io/badge/VMware-Validated-green.svg)](https://www.vmware.com/solutions/validated-solutions.html)
@@ -54,21 +54,21 @@ Official VMware validated solutions and reference architectures for Cloud Founda
 git clone https://github.com/uldyssian-sh/validated-solutions-for-cloud-foundation.git
 cd validated-solutions-for-cloud-foundation
 
-# Navigate to specific solution
-cd solutions/identity-access-management
+# Navigate to ALB examples
+cd alb/ansible-examples/cluster-deployment-playbook
 
 # Review implementation guide
-open docs/implementation-guide.md
+open README.md
 ```
 
 ## 📚 Available Solutions
 
 | Solution | Version | Status | Documentation |
 |----------|---------|--------|---------------|
-| Identity & Access Management | 1.2 | ✅ Validated | [Guide](solutions/iam/README.md) |
-| Developer Ready Infrastructure | 1.1 | ✅ Validated | [Guide](solutions/dri/README.md) |
-| Intelligent Operations | 1.0 | ✅ Validated | [Guide](solutions/iom/README.md) |
-| Intelligent Logging | 1.0 | ✅ Validated | [Guide](solutions/ilm/README.md) |
+| Advanced Load Balancer (ALB) | 1.2 | ✅ Validated | [Guide](alb/README.md) |
+| Private Cloud Automation (PCA) | 1.1 | ✅ Validated | [Guide](pca/README.md) |
+| Health Reporting & Monitoring (HRM) | 1.0 | ✅ Validated | [Guide](hrm/README.md) |
+| Cloud Management & Monitoring (CMM) | 1.0 | ✅ Validated | [Guide](cmm/README.md) |
 
 ## 💰 GitHub Free Tier Optimization
 
