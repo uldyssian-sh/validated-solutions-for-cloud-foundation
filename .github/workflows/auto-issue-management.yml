@@ -1,0 +1,65 @@
+name: Auto Issue Management
+
+on:
+  issues:
+    types: [opened, labeled]
+  pull_request:
+    types: [opened, closed]
+  schedule:
+    - cron: '0 1 * * *'  # Daily at 1 AM
+
+permissions:
+  issues: write
+  pull-requests: write
+  contents: read
+
+jobs:
+  manage-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-label new issues
+        if: github.event.action == 'opened' && github.event_name == 'issues'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const labels = [];
+            
+            // Auto-label based on title/body content
+            if (issue.title.toLowerCase().includes('bug') || issue.body.toLowerCase().includes('error')) {
+              labels.push('bug');
+            }
+            if (issue.title.toLowerCase().includes('feature') || issue.title.toLowerCase().includes('enhancement')) {
+              labels.push('enhancement');
+            }
+            if (issue.title.toLowerCase().includes('security')) {
+              labels.push('security');
+            }
+            if (issue.title.toLowerCase().includes('documentation') || issue.title.toLowerCase().includes('docs')) {
+              labels.push('documentation');
+            }
+            
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: labels
+              });
+            }
+            
+      - name: Close stale issues
+        if: github.event_name == 'schedule'
+        uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity. It will be closed if no further activity occurs. Thank you for your contributions.'
+          close-issue-message: 'This issue has been automatically closed due to inactivity.'
+          stale-pr-message: 'This pull request has been automatically marked as stale because it has not had recent activity.'
+          close-pr-message: 'This pull request has been automatically closed due to inactivity.'
+          days-before-stale: 60
+          days-before-close: 7
+          stale-issue-label: 'stale'
+          stale-pr-label: 'stale'
+          exempt-issue-labels: 'pinned,security'
+          exempt-pr-labels: 'pinned'

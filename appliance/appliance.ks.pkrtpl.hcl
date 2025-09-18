@@ -19,7 +19,7 @@
         "useradd -m -s /bin/bash ${build_username}",
         "echo \"${build_username}:${build_password}\" | chpasswd",
         "usermod -aG sudo ${build_username}",
-        "echo \"${build_username} ALL=(ALL:ALL) NOPASSWD: ALL\" >> /etc/sudoers.d/${build_username}",
+        "echo \"${build_username} ALL=(ALL:ALL) ALL\" >> /etc/sudoers.d/${build_username}",
         "chage --inactive -1 --mindays 0 --maxdays 90 --warndays 7 --expiredate -1 ${build_username}",
         "systemctl restart iptables",
         "sed -i 's/.*PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config",

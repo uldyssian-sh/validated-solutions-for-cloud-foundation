@@ -1,0 +1,55 @@
+name: Repository Cleanup
+
+on:
+  schedule:
+    - cron: '0 3 * * 0'  # Weekly on Sunday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Clean up old workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 30
+          keep_minimum_runs: 10
+          
+      - name: Remove unnecessary files
+        run: |
+          echo "🧹 Cleaning repository"
+          
+          # Remove common unnecessary files
+          find . -name ".DS_Store" -delete
+          find . -name "Thumbs.db" -delete
+          find . -name "*.tmp" -delete
+          find . -name "*.log" -delete
+          
+          # Clean Python cache
+          find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
+          find . -name "*.pyc" -delete
+          find . -name "*.pyo" -delete
+          
+          echo "✅ Cleanup completed"
+          
+      - name: Commit cleanup changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          if [[ -n $(git status --porcelain) ]]; then
+            git add .
+            git commit -m "chore: automated repository cleanup"
+            git push
+            echo "✅ Changes committed"
+          else
+            echo "ℹ️ No changes to commit"
+          fi

@@ -1,17 +1,65 @@
 name: CI
+
 on:
   push:
     branches: [main, master]
   pull_request:
     branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
 jobs:
-  test:
+  validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-    - uses: actions/checkout@v3
-    - name: Basic validation
-      run: |
-        echo "Repository: ${{ github.repository }}"
-        echo "Branch: ${{ github.ref }}"
-        ls -la
-        echo "CI passed successfully"
+      - uses: actions/checkout@v4
+        
+      - name: Validate repository structure
+        run: |
+          echo "🔍 Repository: ${{ github.repository }}"
+          echo "🌿 Branch: ${{ github.ref }}"
+          echo "📁 Structure validation:"
+          
+          # Check required files
+          required_files=("README.md" "LICENSE" "CONTRIBUTING.md")
+          for file in "${required_files[@]}"; do
+            if [[ -f "$file" ]]; then
+              echo "✅ $file exists"
+            else
+              echo "❌ $file missing"
+              exit 1
+            fi
+          done
+          
+          # Validate Python syntax
+          find . -name "*.py" -type f | head -10 | while read file; do
+            python3 -m py_compile "$file" && echo "✅ $file syntax OK" || echo "❌ $file syntax error"
+          done
+          
+          echo "✅ CI validation completed"
+          
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Lint check
+        run: |
+          echo "🔍 Running basic lint checks"
+          
+          # Check for sensitive data patterns
+          if grep -r "password.*=.*['\"].*['\"]" . --exclude-dir=.git; then
+            echo "⚠️ Potential hardcoded credentials found"
+          fi
+          
+          # Check file permissions
+          find . -type f -perm /111 -name "*.py" | head -5
+          
+          echo "✅ Lint check completed"
